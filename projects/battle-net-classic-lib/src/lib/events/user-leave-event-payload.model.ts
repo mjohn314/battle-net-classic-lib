@@ -8,5 +8,5 @@ export interface UserLeaveEventPayload {
    *
    * @memberof UserLeaveEventPayload
    */
-  user_id: string;
+  user_id: number;
 }

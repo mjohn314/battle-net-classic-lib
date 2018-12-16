@@ -11,7 +11,7 @@ export interface UserUpdateEventPayload {
    *
    * @memberof UserUpdateEventPayload
    */
-  user_id: string;
+  user_id: number;
 
   /**
    * The username of the user being updated.
@@ -24,13 +24,15 @@ export interface UserUpdateEventPayload {
    * Contains an array of the flags associated with the user.
    *
    * @memberof UserUpdateEventPayload
+   * @todo API Spec says this should be flags, but it's actually flag
    */
-  flags: FlagType[];
+  flag: FlagType[];
 
   /**
    * An object of all the attributes associated with the user.
    *
    * @memberof UserUpdateEventPayload
+   * @todo What actually comes across in the API doesn't match the spec at all...
    */
-  attributes: { [key in AttributeType]?: string };
+  attribute: [ { key: AttributeType, value: string }];
 }

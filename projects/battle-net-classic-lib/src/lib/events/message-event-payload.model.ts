@@ -10,7 +10,7 @@ export interface MessageEventPayload {
    *
    * @memberof MessageEventPayload
    */
-  user_id: string;
+  user_id: number;
 
   /**
    * The message sent.

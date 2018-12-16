@@ -4,8 +4,8 @@
  * @enum {string}
  */
 export enum AttributeType {
-  ProgramId = 'programId',
-  Rate = 'rate',
-  Rank = 'rank',
-  Wins = 'wins'
+  ProgramId = 'ProgramId',
+  Rate = 'Rate',
+  Rank = 'Rank',
+  Wins = 'Wins'
 }
