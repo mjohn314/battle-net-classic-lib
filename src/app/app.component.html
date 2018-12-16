@@ -1,0 +1,30 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center start">
+  <h1 class="mat-h1 title">BNCL Tester</h1>
+  <p class="mat-small version">Version: {{ version }}</p>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Configuration
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="API Key" [formControl]="apiKeyControl">
+    </mat-form-field>
+
+  </mat-expansion-panel>
+
+  <app-output fxFlex="grow" [addLine$]="message$">
+
+  </app-output>
+
+  <div fxLayout="row">
+    <button mat-raised-button (click)="connect()" [disabled]="!apiKeyControl.valid">CONNECT</button>
+    <mat-form-field>
+      <input matInput placeholder="Message" [formControl]="messageControl">
+    </mat-form-field>
+    <button mat-raised-button (click)="sendMessage()" [disabled]="!messageControl.valid">SEND MESSAGE</button>
+  </div>
+
+</div>
